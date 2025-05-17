@@ -10,28 +10,62 @@
 
         <!-- Webpage Title -->
         <title>Encomiendas Mixco - Calidad y seguridad en sus envíos</title>
-        
+
         <!-- Styles -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/fontawesome-all.min.css" rel="stylesheet">
+        <link href="css/swiper.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
         
+        <!-- Favicon  -->
+        <link rel="icon" href="images/favicon.png">
     </head>
-    <body data-bs-spy="scroll" data-bs-target="#navbarExample">
+    <body data-bs-spy="scroll" data-bs-target="#navbarMain">
         
         <!-- Navigation -->
-        <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
+        <nav id="navbarMain" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
             <div class="container">
 
                 <!-- Image Logo -->
-                <a class="navbar-brand logo-image" href="/"><img src="images/encomiendas-mixco-logo.svg" alt="Encomiendas Mixco-logo"></a> 
-
+                <a class="navbar-brand logo-image" href="/" title="Inicio - Encomiendas Mixco"><img src="images/encomiendas-mixco-logo.svg" alt="Encomiendas Mixco logo" /></a> 
 
                 <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsDefault">
+                    <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/" title="Inicio - Encomiendas Mixco">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paqueteria" title="Paquetería">Paquetería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="documentos" title="Trámites de documentos HN">Trámites de documentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vuelos" title="Vuelos internacionales">Vuelos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto" title="Contacto">Contacto</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="article.html">Article Details</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                    <span class="nav-item">
+                        <a class="btn-outline-sm" href="https://api.whatsapp.com/send?phone=34642900609&text" target="_blank" title="Whatsapp Encomiendas Mixco"> <i class="fab fa-whatsapp "></i>&nbsp;+34 642 900 609</a>
+                    </span>
+                </div> <!-- end of navbar-collapse -->
             </div> <!-- end of container -->
         </nav> <!-- end of navbar -->
         <!-- end of navigation -->
@@ -46,27 +80,22 @@
                             <h1 class="h1-large">Soluciones para Hondureños en España:</h1>
                             <h2><span class="replace-me">Envío de encomiendas entre España y Honduras, Documentación apostillada y legalizada, Venta de billetes de avión y reserva de hoteles</span></h2>
                             
-                            <p class="modal-dialog"><a class="btn-solid-sm" href="https://api.whatsapp.com/message/MLVXBKL3CGQEP1" target="_blank" title="Whatsapp Encomiendas Mixco"> <i class="fab fa-whatsapp "></i>&nbsp;&nbsp; +34 642 900 609
+                            <p class="modal-dialog"><a class="btn-solid-sm" href="https://api.whatsapp.com/send?phone=34642900609&text" target="_blank" title="Whatsapp Encomiendas Mixco"> <i class="fab fa-whatsapp "></i>&nbsp;&nbsp; +34 642 900 609
                             </a></p>
-                            
                         </div> <!-- end of text-container -->
-                        
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
-                        <!-- <div class="image-container"> -->
-                            <img class="img-fluid rounded-3" src="images/encomiendas-mixco.png" alt="Encomiendas Mixco">
-                        <!-- </div>  -->
-                        <!-- end of image-container -->
+                        <div class="image-container">
+                            <img class="img-fluid rounded-3" src="images/encomiendas-mixco.png" alt="Encomiendas Mixco" />
+                        </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
-
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
         </header> <!-- end of header -->
         <!-- end of header -->
 
-
-        <!-- Features -->
-        <div id="features" class="cards-1">
+        <!-- Pricing -->
+        <div id="pricing" class="cards-2 bg-gray">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -78,50 +107,63 @@
                         
                         <!-- Card -->
                         <div class="card">
-                            <div class="card-icon">
-                                <span class="fas fa-shopping-bag"></span>
-                            </div>
                             <div class="card-body">
-                                <h4 class="card-title">Envío express internacional de encomiendas y paquetería
-                                </h4>
+                                <div class="card-title">
+                                    <img class="decoration-lines" src="images/decoration-lines.svg" alt="Decoration lines" /><span> <e class="orange">Encomiendas</e> entre España - Honduras</span><img class="decoration-lines flipped" src="images/decoration-lines.svg" alt="Decoration" />
+                                </div>
+                                
                                 <p class="justify">Ofrecemos un servicio de envío rápido y seguro de paquetes entre España y Honduras. Nos encargamos de todo el proceso, desde la recogida hasta la entrega final en todo el país, garantizando la integridad y puntualidad de sus envíos.</br> 
                                 Algunos de los artículos que es posible transportar:</br> 
-                                - Prendas de vestir.</br> 
-                                - Tecnología.</br>
-                                - Juguetes.</br>
-                                - Accesorios.</br>
-                                - Zapatos, etc.</p>
+                                <ul class="list-unstyled li-space-lg text-start">
+                                    <li>- Prendas de vestir</li>
+                                    <li>- Tecnología</li>
+                                    <li>- Juguetes</li>
+                                    <li>- Accesorios</li>
+                                    <li>- Zapatos, etc.</li>
+                                </ul></p>
+                                
+                                <div class="price"><h6>Desde</h6>7€<span></br> /libra</span></div>
+                                <a class="btn-solid-reg" href="paqueteria" title="Paquetería Encomiendas Mixco">Más detalles</a>
                             </div>
                         </div>
                         <!-- end of card -->
 
                         <!-- Card -->
                         <div class="card">
-                            <div class="card-icon green">
-                                <span class="fas fa-file-alt"></span>
-                            </div>
                             <div class="card-body">
-                                <h4 class="card-title">Gestión integral de documentación apostillada y legalizada</h4>
-                                <p class="justify">Facilitamos sus trámites legales, asegurando que sus documentos cumplan con todos los requisitos internacionales.
-                                </br>Entre los documentos que gestionamos se encuentran: </br> 
-                                - Partidas de nacimiento.</br> 
-                                - Certificados de estudios.</br>
-                                - Antecedentes penales.</br>
-                                - Actas de soltería.</br>
-                                - Guarda y custodias.</br></br> 
-                                Consulte nuestro pack para nacionalidad por 150€.</p>
+                                <div class="card-title">
+                                    <img class="decoration-lines" src="images/decoration-lines.svg" alt="Decoration lines" /><span>Gestión de trámites de <e class="orange">documentos</e></span><img class="decoration-lines flipped" src="images/decoration-lines.svg" alt="Decoration" />
+                                </div>
+                                <p class="justify">Facilitamos la tramitación de documentos oficiales, asegurando que cumplan con todos los requisitos legales para su validez internacional. </br>Nos encargamos de la <b>gestión, apostilla y legalización</b> de cada uno de los documentos, además brindamos asesoría y seguimiento durante todo el proceso.</p>
+                                <ul class="list-unstyled li-space-lg text-start">
+                                    <li>- Agilidad en los tiempos de tramitación</li>
+                                    <li>- Acompañamiento y seguimiento experto personalizado</li>
+                                    <li>- Servicio puerta a puerta seguro</li>
+                                    <li>- Transparencia total en cada paso</li>
+                                </ul>
+                                
+                                <div class="price"><h6>Desde</h6>150€<span></br>Pack para nacionalidad</span></div>
+                                <a href="documentos" class="btn-solid-reg">Más detalles</a>
                             </div>
                         </div>
                         <!-- end of card -->
 
                         <!-- Card -->
                         <div class="card">
-                            <div class="card-icon blue">
-                                <span class="fas fa-plane-departure"></span>
-                            </div>
                             <div class="card-body">
-                                <h4 class="card-title">Venta billetes de avión y reserva de hoteles internacionales </h4>
-                                <p class="justify">Ayudamos a planificar su viaje de manera eficiente y económica, adaptándonos a sus necesidades. Ayudamos a planificar su viaje, ofreciendo opciones de vuelos que se ajusten a tus necesidades y presupuesto. </br> Proporcionamos asesoría personalizada en la elaboración de documentación y gestión aduanera.</p>
+                                <div class="card-title">
+                                    <img class="decoration-lines" src="images/decoration-lines.svg" alt="Decoration lines" /><span>Venta y reserva de <e class="orange">billetes de avión</e></span><img class="decoration-lines flipped" src="images/decoration-lines.svg" alt="Decoration" />
+                                </div>
+                                <p class="justify">En Encomiendas Mixco, entendemos que viajar entre España y Honduras no es solo una cuestión de comprar un billete de avión, sino de vivir una experiencia tranquila, segura y planificada con inteligencia. Por eso, no solo ofrecemos tarifas competitivas, sino que también asesoramos para que elijas las rutas, fechas y horarios más convenientes, evitando costos ocultos, contratiempos o reservas equivocadas. Al confiar en nosotros, obtienes beneficios que van mucho más allá del precio:</p>
+                                <ul class="list-unstyled li-space-lg text-start">
+                                    <li>- Optimización del precio y condiciones</li>
+                                    <li>- Seguros, documentación requerida</li>
+                                    <li>- Asesoramiento aduanero</li>
+                                    <li>- Gestión integral de viaje</li>
+                                    <li>- Planificación de traslados</li>
+                                    <li>- Recomendaciones personalizadas</li>
+                                </ul>
+                                <a href="viajes" class="btn-solid-reg">Más detalles</a>
                             </div>
                         </div>
                         <!-- end of card -->
@@ -129,34 +171,417 @@
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
-        </div> <!-- end of cards-1 -->
-        <!-- end of services -->
+        </div> <!-- end of cards-2 -->
+        <!-- end of pricing -->
+
+        
+
+        <!-- Invitation -->
+        <div class="basic-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="h2-heading white">¿Quiénes somos?</h2>
+                        <h5 class="justify white"><span class="orange">Encomiendas Mixco</span> nace con el propósito de facilitar la conexión de los hondureños entre España y Honduras, ofreciendo servicios logísticos, de gestión documental y de viajes y reservas de hoteles, que respondan a las necesidades de la comunidad. </h5>
+                        <h5 class="justify white">En el transcurso del tiempo, hemos crecido y evolucionado, adaptándonos a los cambios pero siempre manteniendo nuestro compromiso con la calidad y la satisfacción del cliente.</h5>                                
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-3 -->
+        <!-- end of invitation -->
+
 
         
         <!-- parallax -->
 
-              <div class="parallax">
-              </div>
+        <div class="parallax">
+        </div>
+  
+        <!-- end of parallax -->
+
+
+
+        <!-- Features -->
+        <div id="features" class="cards-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="h2-heading">Nosotros</h2>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                        
+                        <!-- Card -->
+                        <div class="col-md-4 col-sm-12">
+                            <!-- <div class="card-icon">
+                                <span class="fas fa-headphones-alt"></span>
+                            </div> -->
+                            <div class="card-body">
+                                <h4 class="card-title">Nuestra Misión</h4>
+                                <p class="justify">Brindar soluciones integrales en logística y gestión documental, facilitando la conexión entre personas y comunidades a través de servicios eficientes, seguros y personalizados.</p>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        <!-- Card -->
+                        <div class="col-md-4 col-sm-12">
+                            <!-- <div class="card-icon green">
+                                <span class="far fa-clipboard"></span>
+                            </div> -->
+                            <div class="card-body">
+                                <h4 class="card-title">Nuestra Visión</h4>
+                                <p class="justify">Ser la empresa líder en servicios de encomiendas y gestión documental entre España y Honduras, reconocida por su excelencia, innovación y compromiso con el cliente.</p>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        <!-- Card -->
+                        <div class="col-md-4 col-sm-12">
+                            <!-- <div class="card-icon blue">
+                                <span class="far fa-comments"></span>
+                            </div> -->
+                            <div class="card-body">
+                                <h4 class="card-title">Nuestros Valores</h4>
+                                <p class="justify">
+                                    <ul class="list-unstyled li-space-lg text-start">
+                                        <li><b>- Compromiso:</b> Nos dedicamos plenamente a cubrir los requisitos de nuestros clientes.</li>
+                                        <li><b>- Integridad:</b> Actuamos con honestidad y transparencia en todas nuestras operaciones.</li>
+                                        <li><b>- Innovación:</b> Buscamos constantemente mejorar y adaptarnos a las nuevas tecnologías y demandas del mercado.</li>
+                                        <li><b>- Empatía:</b> Entendemos y valoramos las emociones y necesidades de nuestros clientes.</li>
+                                    </ul></p>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+
+                                        
+                        <!-- parallax2 -->
+
+                        <div class="parallax2">
+                        </div>
+                
+                        <!-- end of parallax2 -->
+
+                        <div><h3>Nuestro Equipo</h3>
+                            <p class="justify">Contamos con un equipo multidisciplinario de profesionales en logística, gestión documental y atención al cliente, comprometidos con brindar un servicio de excelencia.</br>
+                            
+                            Nuestro equipo de logística está compuesto por expertos en transporte nacional e internacional, que dominan las normativas aduaneras, procesos de envío seguro y rutas eficientes tanto aéreas, como terrestres. </br>Además, contamos con gestores especializados en documentos internacionales, quienes se encargan de tramitar los documentos, apostillas, legalizaciones y certificados cumpliendo todos los requisitos legales exigidos en España y Honduras.</br>
+
+                            Cada uno de nuestros asesores está capacitado para escuchar, comprender las necesidades específicas de cada usuario y proponer soluciones claras y adaptadas, brindando siempre un trato humano, cercano y transparente.</br> Nos esforzamos para que cada cliente sienta que tiene un aliado confiable que le acompaña en todo el proceso, resolviendo sus dudas y manteniéndolo informado de cada paso.
+                            </p>
+
+
+                        </div>
+
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of cards-1 -->
+        <!-- end of services -->
+
+
+        <!-- Details 1 -->
+        <div id="details" class="basic-1 bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-5">
+                        <div class="text-container">
+                            <h2>¿Por qué elegir <span class="orange">Encomiendas Mixco</span>?</h2>
+                            <p><ul class="list-unstyled li-space-lg text-start">
+                                <li><b>- Experiencia y profesionalismo:</b> Contamos con un equipo capacitado y comprometido con la excelencia en el servicio.</li>
+                                <li><b>- Atención personalizada:</b> Nos adaptamos a sus necesidades específicas, brindándole soluciones a medida.</li>
+                                <li><b>- Cobertura amplia:</b> Operamos en todas las ciudades de España y Honduras, facilitando sus envíos y trámites.</li>
+                            </p>
+                            <a class="btn-solid-reg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modal</a>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="image-container">
+                            <img class="img-fluid" src="images/por-que-encomiendas-mixco.png" alt="¿Por qué elegir Encomiendas Mixco?" />
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-1 -->
+        <!-- end of details 1 -->
+
+
+        <!-- Details Modal -->
+        <div id="staticBackdrop" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="row">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="col-lg-8">
+                            <div class="image-container">
+                                <img class="img-fluid" src="images/details-modal.jpg" alt="Modal" />
+                            </div> <!-- end of image-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-4">
+                            <h3>Goals Setting</h3>
+                            <hr>
+                            <p>In gravida at nunc sodales pretium. Vivamus semper, odio vitae mattis auctor, elit elit semper magna ac tum nico vela spider</p>
+                            <h4>User Feedback</h4>
+                            <p>Sapien vitae eros. Praesent ut erat a tellus posuere nisi more thico cursus pharetra finibus posuere nisi. Vivamus feugiat</p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="d-flex">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <div class="flex-grow-1">Tincidunt sem vel brita bet mala</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <div class="flex-grow-1">Sapien condimentum sacoz sil necr</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <div class="flex-grow-1">Fusce interdum nec ravon fro urna</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <div class="flex-grow-1">Integer pulvinar biolot bat tortor</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <div class="flex-grow-1">Id ultricies fringilla fangor raq trinit</div>
+                                </li>
+                            </ul>
+                            <a id="modalCtaBtn" class="btn-solid-reg" href="#your-link">Details</a>
+                            <button type="button" class="btn-outline-reg" data-bs-dismiss="modal">Close</button>
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+                </div> <!-- end of modal-content -->
+            </div> <!-- end of modal-dialog -->
+        </div> <!-- end of modal -->
+        <!-- end of details modal -->
+
+
+       
         
 
+        <!-- Testimonials -->
+        <div class="slider-1 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="text-center"><a href="https://g.page/r/CQ80c2yEqaL_EBM/review" title="Reseñas">Algunos de nuestros clientes opinan:</a></h2></br></br>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <!-- Card Slider -->
+                        <div class="slider-container">
+                            <div class="swiper-container card-slider">
+                                <div class="swiper-wrapper">
+                                    
+                                    <!-- Slide -->
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="testimonial-text">Contenta por su servicio d calidad agilidad y responsabilidad y muy confiable al q lo desee lo recomiendo al 100</p>
+                                                <p class="testimonial-author">Aleyda carola Torres</p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end of swiper-slide -->
+                                    <!-- end of slide -->
+            
+                                    <!-- Slide -->
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="testimonial-text">Súper responsables y puntuales...y la verdad que consientes en los precios de todo..liy contenta con sus servicios.</p>
+                                                <p class="testimonial-author">Gabriela Ayestas</p>
+                                            </div>
+                                        </div>        
+                                    </div> <!-- end of swiper-slide -->
+                                    <!-- end of slide -->
+            
+                                    <!-- Slide -->
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="testimonial-text">Excelente servicio, muy amables y todo muy rápido! 🤝🏻💪🏻
+                                                </p>
+                                                <p class="testimonial-author">Ever A Paz</p>
+                                            </div>
+                                        </div>        
+                                    </div> <!-- end of swiper-slide -->
+                                    <!-- end of slide -->
+            
+                                    <!-- Slide -->
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="testimonial-text">Me vino en buenas condiciones muy bien lo recomiendo
+                                                </p>
+                                                <p class="testimonial-author">Samuel sanchez</p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end of swiper-slide -->
+                                    <!-- end of slide -->
+            
+                                    <!-- Slide -->
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="testimonial-text">He enviado a Honduras desde Madrid y la experiencia ha sido muy buena, el trato ha sido excelente todo el tiempo y el paquete ha llegado sin problemas a su destino, excelente servicio.</p>
+                                                <p class="testimonial-author">Marcos Puga</p>
+                                            </div>
+                                        </div>        
+                                    </div> <!-- end of swiper-slide -->
+                                    <!-- end of slide -->
+            
+                                    <!-- Slide -->
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="testimonial-text">Se las recomiendo 👌 al 100% es una empresa muy responsable entrega sus envíos a tiempo muy responsables</p>
+                                                <p class="testimonial-author">Karla Lanza</p>
+                                            </div>
+                                        </div>        
+                                    </div> <!-- end of swiper-slide -->
+                                    <!-- end of slide -->
+                                
+                                </div> <!-- end of swiper-wrapper -->
+            
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <!-- end of add arrows -->
+            
+                            </div> <!-- end of swiper-container -->
+                        </div> <!-- end of slider-container -->
+                        <!-- end of card slider -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of slider-1 -->
+        <!-- end of testimonials -->
+
+        
+
+        <!-- Questions -->
+        <div class="accordion-1 bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="h2-heading">Preguntas Frecuentes (FAQ) ❓ </h2>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->   
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="accordion" id="accordionEM">
+                            
+                            <!-- Accordion Item -->
+                            <div class="accordion-item bg-gray">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Qué tipo de paquetes puedo enviar?</button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionEM">
+                                    <div class="accordion-body">Puede enviar una amplia variedad de artículos, siempre que cumplan con las regulaciones aduaneras. Esto incluye: ropa, euros, tecnología, dispositivos electrónicos o sanitarios, documentos, juguetes, zapatos, regalos, medicamentos (bajo prescripción médica), entre otros. </div>
+                                </div>
+                            </div>
+                            <!-- end of accordion-item -->
+
+                            <!-- Accordion Item -->
+                            <div class="accordion-item bg-gray">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">¿Cuánto tiempo tarda en llegar un envío?</button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionEM">
+                                    <div class="accordion-body">El tiempo de entrega varía según el destino y el tipo de servicio. Todos los meses viajamos a Honduras y España, una vez en el país, generalmente, los envíos tardan hasta 5 días hábiles en estar disponibles.</div>
+                                </div>
+                            </div>
+                            <!-- end of accordion-item -->
+
+                            <!-- Accordion Item -->
+                            <div class="accordion-item bg-gray">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Qué documentos necesito para apostillar o legalizar?</button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionEM">
+                                    <div class="accordion-body">Depende del tipo de documento y del país de destino. Nuestro equipo te asesorará sobre los requisitos específicos para tu caso.</div>
+                                </div>
+                            </div>
+                            <!-- end of accordion-item -->
+
+                            
+
+                            <!-- Accordion Item -->
+                            <div class="accordion-item bg-gray">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">¿Qué documentos se pueden apostillar o autenticar?</button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionEM">
+                                    <div class="accordion-body">Partidas de nacimiento, Certificados de estudios, Antecedentes penales, Actas de soltería, Actas de matrimonio, Guardas y custodias, etc</div>
+                                </div>
+                            </div>
+                            <!-- end of accordion-item -->
+
+                            <!-- Accordion Item -->
+                            <div class="accordion-item bg-gray">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">¿Cuánto tiempo se tarda en apostillar un documento?</button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionEM">
+                                    <div class="accordion-body">10 días laborables en formato electrónico, desde que nos entrega toda la documentación y detalles; además se puede entregar en formato físico posteriormente.</div>
+                                </div>
+                            </div>
+                            <!-- end of accordion-item -->
+
+                            
+
+                            <!-- Accordion Item -->
+                            <div class="accordion-item bg-gray">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">¿Qué documentos necesito para apostillar o legalizar?</button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">Depende del tipo de documento y del país de destino. Nuestro equipo te asesorará sobre los requisitos específicos para tu caso.</div>
+                                </div>
+                            </div>
+                            <!-- end of accordion-item -->
+                             
+
+                            <!-- Accordion Item -->
+                            <div class="accordion-item bg-gray">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">¿Puedo reservar un vuelo con ustedes?</button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionEM">
+                                    <div class="accordion-body">Sí, ofrecemos servicios de venta y reserva de vuelos internacionales, así como también reservas de hoteles, además de la gestión de los seguros necesarios e itinerarios, nos adaptamos a sus necesidades.</div>
+                                </div>
+                            </div>
+                            <!-- end of accordion-item -->
+
+                            
+
+
+                        </div> <!-- end of accordion -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of accordion-1 -->
+        <!-- end of questions -->
 
 
         <!-- Footer -->
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer-col first">
-                            <a class="navbar-brand logo-image" href="/"><img src="images/encomiendas-mixco-logo.svg" alt="Encomiendas Mixco - Envíos entre España y Honduras"></a>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 ">
+                            <a class="navbar-brand logo-image" href="/"><img src="images/encomiendas-mixco-logo.svg" alt="Encomiendas Mixco - Envíos entre España y Honduras - Logo" /></a>
                         </div> <!-- end of footer-col -->
-                        <div class="footer-col second text-center h1">
-                            <a class="btn-solid-sm" href="https://api.whatsapp.com/message/MLVXBKL3CGQEP1" target="_blank" title="Whatsapp Encomiendas Mixco"><i class="fab fa-whatsapp"></i>&nbsp;&nbsp; +34 642 900 609
+
+                        <div class="col-md-4 col-sm-12 text-center h1">
+                            <a class="btn-solid-sm" href="https://api.whatsapp.com/send?phone=34642900609&text" target="_blank" title="Whatsapp Encomiendas Mixco"><i class="fab fa-whatsapp"></i>&nbsp;&nbsp; +34 642 900 609
                             </a>
                             
                         </div> <!-- end of footer-col -->
-                        <div class="footer-col third text-center">
+                        <div class="col-md-4 col-sm-12 footer-col third text-center">
                             <span class="fa-stack">
-                                <a href="https://api.whatsapp.com/message/MLVXBKL3CGQEP1" target="_blank" title="Whatsapp Encomiendas Mixco">
+                                <a href="https://api.whatsapp.com/send?phone=34642900609&text" target="_blank" title="Whatsapp Encomiendas Mixco">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-whatsapp fa-stack-1x"></i>
                                 </a>
@@ -181,6 +606,7 @@
         </div> <!-- end of footer -->  
         <!-- end of footer -->
 
+
    
         <!-- Copyright -->
         <div class="copyright">
@@ -198,12 +624,14 @@
 
         <!-- Back To Top Button -->
         <button onclick="topFunction()" id="myBtn">
-            <img src="images/up-arrow.png" alt="alternative">
+            <img src="images/up-arrow.png" alt="alternative" />
         </button>
         <!-- end of back to top button -->
             
         <!-- Scripts -->
         <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+        <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
         <script src="js/replaceme.min.js"></script> <!-- ReplaceMe for rotating text -->
         <script src="js/scripts.js"></script> <!-- Custom scripts -->
     </body>

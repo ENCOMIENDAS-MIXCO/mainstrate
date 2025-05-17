@@ -23,9 +23,9 @@ Table Of Contents:
 /*****************************************
 Colors:
 - Backgrounds - light gray #f9f8f8
-- Buttons - navy blue #272556
-- Buttons - orange #f25c05
-- Headings text - navy blue #272556
+- Buttons - navy blue #55057A
+- Buttons - orange #E84B02
+- Headings text - navy blue #55057A
 - Body text - dark gray #565578
 ******************************************/
 
@@ -45,7 +45,7 @@ body, p {
 }
 
 h1 {
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 2.5rem;
 	line-height: 3.25rem;
@@ -53,7 +53,7 @@ h1 {
 }
 
 h2 {
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 2rem;
 	line-height: 2.625rem;
@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 1.75rem;
 	line-height: 2.25rem;
@@ -69,7 +69,7 @@ h3 {
 }
 
 h4 {
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 1.5rem;
 	line-height: 2.125rem;
@@ -77,14 +77,14 @@ h4 {
 }
 
 h5 {
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 1.25rem;
 	line-height: 1.625rem;
 }
 
 h6 {
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 1rem;
 	line-height: 1.375rem;
@@ -114,6 +114,10 @@ h6 {
 	margin-bottom: 0.5rem;
 }
 
+i {
+    line-height: inherit !important;
+}
+
 a {
 	color: #565578;
 	text-decoration: underline;
@@ -136,16 +140,28 @@ a:hover {
 	color: #6168ff;
 }
 
+.orange {
+	color: #f25c05;
+}
+
+.white {
+	color: #ffffff;
+}
+
 .bg-gray {
 	background-color: #f9f8f8;
+}
+
+.justify {
+	text-align: justify !important;
 }
 
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.375rem 2.25rem 1.375rem 2.25rem;
-	border: 1px solid #272556;
+	border: 1px solid #55057A;
 	border-radius: 30px;
-	background-color: #272556;
+	background-color: #55057A;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -156,16 +172,16 @@ a:hover {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #272556; /* needs to stay here because of the color property of a tag */
+	color: #55057A; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
 .btn-solid-lg {
 	display: inline-block;
 	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-	border: 1px solid #272556;
+	border: 1px solid #55057A;
 	border-radius: 30px;
-	background-color: #272556;
+	background-color: #55057A;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -176,16 +192,16 @@ a:hover {
 
 .btn-solid-lg:hover {
 	background-color: transparent;
-	color: #272556; /* needs to stay here because of the color property of a tag */
+	color: #55057A; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
 .btn-solid-sm {
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
-	border: 1px solid #272556;
+	border: 1px solid #55057A;
 	border-radius: 30px;
-	background-color: #272556;
+	background-color: #55057A;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -196,7 +212,7 @@ a:hover {
 
 .btn-solid-sm:hover {
 	background-color: transparent;
-	color: #272556; /* needs to stay here because of the color property of a tag */
+	color: #55057A; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
@@ -242,7 +258,7 @@ a:hover {
 
 .btn-outline-sm {
 	display: inline-block;
-	padding: 1rem 1.5rem 1rem 1.5rem;
+	padding: 0.8rem 1.4rem;
 	border: 1px solid #f25c05;
 	border-radius: 30px;
 	background-color: transparent;
@@ -345,17 +361,16 @@ a:hover {
 }
 
 .navbar .navbar-brand {
-	padding-top: 0.05rem;
-	padding-bottom: 0.05rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 }
 
 .navbar .logo-image img {
-    width: 180px;
 	height: 100px;
 }
 
 .navbar .logo-text {
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 1.875rem;
 	line-height: 1rem;
@@ -364,7 +379,7 @@ a:hover {
 
 .offcanvas-collapse {
 	position: fixed;
-	top: 3.25rem; /* adjusts the height between the top of the page and the offcanvas menu */
+	top: 80px; /* adjusts the height between the top of the page and the offcanvas menu */
 	bottom: 0;
 	left: 100%;
 	width: 100%;
@@ -385,14 +400,14 @@ a:hover {
 }
 
 .navbar .navbar-nav {
-	margin-top: 0.25rem;
-	margin-bottom: 0.2rem;
+	margin-top: 0.75rem;
+	margin-bottom: 0.5rem;
 }
 
 .navbar .nav-item .nav-link {
-	padding-top: 0.25rem;
-	padding-bottom: 0.25rem;
-	color: #272556;
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+	color: #55057A;
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -426,9 +441,9 @@ a:hover {
 }
 
 .navbar .dropdown-item {
-	padding-top: 0.25rem;
-	padding-bottom: 0.25rem;
-	color: #272556;
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
@@ -453,7 +468,6 @@ a:hover {
 	padding: 0;
 	border: none;
 	font-size: 1.25rem;
-	display: none;
 }
 
 
@@ -475,9 +489,9 @@ a:hover {
 	color: #f25c05;
 }
 
-.header .replace-me span {
-	text-decoration: none;
-}
+/* .header .replace-me span {
+	text-decoration: underline;
+} */
 
 .header .p-large {
 	margin-bottom: 2.75rem;
@@ -501,7 +515,7 @@ a:hover {
 	background-image: url(../images/encomiendas-mixco-bg.png);
   
 	/* Set a specific height */
-	min-height: 500px;
+	min-height: 400px;
   
 	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
@@ -513,11 +527,31 @@ a:hover {
 
 
 /********************/
+/*     Parallax2     */
+/********************/
+.parallax2 {
+	/* The image used */
+	background-image: url(../images/encomiendas-mixco-bg.png);
+  
+	/* Set a specific height */
+	min-height: 200px;
+  
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;	
+    background-color: #fff2dc;
+	margin: 3em 0;
+}
+
+
+/********************/
 /*     Features     */
 /********************/
 .cards-1 {
-	padding-top: 9rem;
-	padding-bottom: 1.25em;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
 	text-align: center;
 }
 
@@ -527,7 +561,7 @@ a:hover {
 
 .cards-1 .h2-heading span {
 	color: #f25c05;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .cards-1 .card {
@@ -785,7 +819,7 @@ a:hover {
 .basic-3 {
 	padding-top: 9rem;
 	padding-bottom: 9rem;
-	background-color: #272556;
+	background-color: #55057A;
 	text-align: center;
 }
 
@@ -801,7 +835,7 @@ a:hover {
 
 .basic-3 .btn-outline-lg:hover {
 	background-color: #ffffff;
-	color: #272556;
+	color: #55057A;
 }
 
 
@@ -816,6 +850,10 @@ a:hover {
 .cards-2 .h2-heading {
 	margin-bottom: 3.75rem;
 	text-align: center;
+}
+
+.cards-2 .h2-heading span {
+	color: #f25c05;
 }
 
 .cards-2 .card {
@@ -847,7 +885,7 @@ a:hover {
 .cards-2 .card-title span {
 	margin-right: 0.75rem;
 	margin-left: 0.75rem;
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 1.75rem;
 	line-height: 2rem;
@@ -864,7 +902,7 @@ a:hover {
 
 .cards-2 .card-body .price {
 	margin-bottom: 3rem;
-	color: #272556;
+	color: #55057A;
 	font-weight: 600;
 	font-size: 3.5rem;
 	line-height: 2rem;
@@ -876,7 +914,6 @@ a:hover {
 	font-size: 1rem;
 	line-height: 0;
 }
-
 
 /*********************/
 /*     Questions     */
@@ -954,7 +991,7 @@ a:hover {
 .footer {
 	padding-top: 6.5rem;
 	padding-bottom: 2rem;
-	background-color: #18c3dfb5;
+	background-color: #fff2dc;
 }
 
 .footer a {
@@ -1061,7 +1098,7 @@ a:hover {
 /***********************/
 .ex-header {
 	padding-top: 9rem;
-	padding-bottom: 5rem;
+	padding-bottom: 4rem;
 	background-color: #fff2dc;
 }
 
@@ -1114,16 +1151,6 @@ a:hover {
 /*     Media Queries     */
 /*************************/	
 /* Min-width 768px */
-@media only screen and (max-width: 767px) {
-    h1 {
-        font-size: 2.4rem;
-        font-weight: bold;
-    }
-
-}
-/* end of min-width 768px */
-
-/* Min-width 768px */
 @media (min-width: 768px) {
 
 	/* Header */
@@ -1167,20 +1194,20 @@ a:hover {
 
 	/* Navigation */
 	.navbar {
-		padding-top: 1.75rem;
 		background-color: transparent;
 		box-shadow: none;
 		transition: all 0.2s;
 	}
 
 	.navbar.extra-page {
-		padding-top: 0.2rem;
+		padding-top: 0.5rem;
 	}
 
 	.navbar.top-nav-collapse {
-		padding-top: 0.2rem;
-		padding-bottom: 0.2rem;
+		padding-top: 0;
+		padding-bottom: 0;
 		background-color: #fff2dc;
+    	height: 70px;
 	}
 
 	.offcanvas-collapse {
@@ -1207,13 +1234,13 @@ a:hover {
 	}
 	
 	.navbar .nav-item .nav-link {
-		padding-right: 0.25rem;
-		padding-left: 0.25rem;
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
 	}
 
 	.navbar .dropdown-menu {
-		padding-top: 0.25rem;
-		padding-bottom: 0.25rem;
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
 		box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.08);
 	}
 
@@ -1223,7 +1250,7 @@ a:hover {
 
 	.navbar .nav-item .btn-outline-sm {
 		margin-top: 0;
-		margin-left: 0.25rem;
+		margin-left: 0.4rem;
 	}
 	/* end of navigation */
 
@@ -1264,10 +1291,7 @@ a:hover {
 	.basic-1 .text-container {
 		margin-bottom: 0;
 	}
-
-	.justify {
-		text-align: justify;
-	}
+	
 	/* end of details 1 */
 
 	
@@ -1423,8 +1447,8 @@ a:hover {
 	/* Header */
 	.header {
 		overflow: hidden;
-		padding-top: 12.5rem;
-		padding-bottom: 14rem;
+		padding-top: 18.5rem;
+		padding-bottom: 18rem;
 	}
 
 	.header .image-container {
