@@ -1150,6 +1150,38 @@ a:hover {
 /*************************/
 /*     Media Queries     */
 /*************************/	
+/* MAX-width 768px */
+@media (max-width: 767px) {
+
+	.navbar {
+		height: 70px;
+	}
+
+	.navbar .logo-image img { 
+		height: 70px;
+	}
+
+	.offcanvas-collapse {
+		top: 70px;
+	}
+
+	.navbar .navbar-brand{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.ex-header {
+		padding-top: 5rem;
+		padding-bottom: 2rem;
+	}
+
+	h1 {
+		font-size: 2.3rem;
+		line-height: 2.7rem;
+		letter-spacing: -0.2px;
+	}
+
+}
 /* Min-width 768px */
 @media (min-width: 768px) {
 
