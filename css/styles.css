@@ -1044,6 +1044,11 @@ a:hover {
 	color: #ffffff;
 }
 
+.ftsecond {
+	text-align: center !important;
+	display: inline-flex !important;
+	margin: 1em auto !important;
+}
 
 /*********************/
 /*     Copyright     */
@@ -1424,21 +1429,18 @@ a:hover {
 
 	.footer .footer-col.first {
 		display: inline-block;
-		width: 320px;
 		margin-right: 1.75rem;
 		vertical-align: top;
 	}
 	
 	.footer .footer-col.second {
 		display: inline-block;
-		width: 320px;
 		margin-right: 1.75rem;
 		vertical-align: top;
 	}
 	
 	.footer .footer-col.third {
 		display: inline-block;
-		width: 224px;
 		text-align: right;
 		vertical-align: top;
 	}
@@ -1447,6 +1449,10 @@ a:hover {
 		margin-right: 0;
 		margin-left: 0.375rem;
 	}
+	.gmp-map {
+	  height: 100%;
+	}
+
 	/* end of footer */
 
 
