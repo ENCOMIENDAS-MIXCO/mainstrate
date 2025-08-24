@@ -577,6 +577,11 @@ h6,
     transform: scale(1.15);
 }
 
+.img-blog-detail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
 
 /*** Miscellaneous ***/
 @media (min-width: 991.98px) {
@@ -596,7 +601,7 @@ h6,
 }
 
 .bg-header {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/cayos-cochinos-Turismo-Honduras.jpg) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/blog/blog-header-bg.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -631,4 +636,59 @@ iframe .DqBBlb, iframe .zAVwcb, iframe .Esexse.sId0Ce {
 
 iframe .m7w29c {
     border: 0 !important;
+}
+
+/* Sidebar thumbnail images */
+.sidebar-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* Formulario incrustado - Selector de países */
+.country-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.country-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    flex: 1;
+    justify-content: center;
+}
+
+.country-option:hover {
+    border-color: #007bff;
+    background: #f8f9fa;
+}
+
+.country-option.selected {
+    border-color: #28a745;
+    background: #d4edda;
+}
+
+.flag-icon {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.country-option span {
+    font-weight: 500;
+    color: #495057;
+}
+
+.country-option.selected span {
+    color: #155724;
 }
