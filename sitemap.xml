@@ -4,31 +4,78 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
   <loc>https://encomiendasmixco.es/</loc>
-  <lastmod>2025-05-17T20:09:07+00:00</lastmod>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://encomiendasmixco.es/contacto</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://encomiendasmixco.es/paqueteria</loc>
-  <lastmod>2025-05-17T20:09:07+00:00</lastmod>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://encomiendasmixco.es/documentos</loc>
-  <lastmod>2025-05-17T20:09:07+00:00</lastmod>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://encomiendasmixco.es/vuelos</loc>
-  <lastmod>2025-05-17T20:09:07+00:00</lastmod>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://encomiendasmixco.es/contacto</loc>
-  <lastmod>2025-05-17T20:09:07+00:00</lastmod>
+  <loc>https://encomiendasmixco.es/blog</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://encomiendasmixco.es/blog/historias-reales/</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/guia-rapida-para-enviar-paquetes-a-Honduras</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/que-puedes-enviar-a-honduras-comida-ropa-y-recuerdos</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/como-embalar-correctamente-tus-paquetes</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/aduanas-y-normativas-lo-que-debes-saber</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/envios-urgentes-cuando-y-como-solicitarlos</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/seguimiento-en-tiempo-real-de-tus-envios</loc>
+  <lastmod>2025-08-24T17:23:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
