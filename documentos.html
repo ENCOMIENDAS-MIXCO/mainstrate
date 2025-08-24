@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="facebook-domain-verification" content="nq7pgfve8s9fqw3kndg2wdl9bid83n" />
-    <meta name="description" content="Envío de paquetes, encomiendas a Honduras y España, gestión de documentos apostillados, venta de vuelos y hoteles">
+    <meta name="description" content="Gestionamos documentos apostillados para Honduras desde España. Actas, antecedentes penales, títulos universitarios. Te ayudamos con todos los trámites legales.">
     <meta name="author" content="Encomiendas Mixco">
-    <title>Documentación apostillada y legalizada de Honduras</title>
+    <title>Documentos Apostillados para Honduras desde España | Encomiendas Mixco</title>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Encomiendas Mixco" />
     <meta property="og:site" content="https://encomiendasmixco.es" /> 
@@ -78,6 +78,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -125,6 +127,14 @@
                     <a href="paqueteria" title="Paquetería a Honduras" class="nav-item nav-link">Paquetería</a>
                     <a href="documentos" title="Gestión de Trámites apostillados" class="nav-item nav-link active orange">Trámites de documentos</a>
                     <a href="vuelos" title="Vuelos y hoteles" class="nav-item nav-link">Vuelos</a>
+                    <div class="nav-item dropdown">
+                        <a href="/blog" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Blog</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog/envios-y-paqueteria/" class="dropdown-item">📦 Envíos y Paquetería</a>
+                            <a href="blog/tramites-legales/" class="dropdown-item">⚖️ Trámites Legales</a>
+                            <a href="blog/historias-reales/" class="dropdown-item">💝 Historias Reales</a>
+                        </div>
+                    </div>
                     <a href="contacto" title="Contacto Encomiendas Mixco" class="nav-item nav-link">Contacto</a>
                     <a class="btn btn-orange btn-outline-sm nav-item nav-link" href="https://api.whatsapp.com/send?phone=34642900609" target="_blank" title="Whatsapp Encomiendas Mixco"> <i class="fab fa-whatsapp "></i>&nbsp;+34 642 900 609</a>
                 </div>               
@@ -295,6 +305,97 @@
     </div>
     <!-- faq End -->
 
+    <!-- Formulario Incrustado Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h1 class="mb-0">¿Necesitas ayuda con tus trámites?</h1>
+                    </div>
+                    <p class="mb-4">¿Tienes dudas sobre apostillas, legalizaciones o necesitas orientación sobre documentos hondureños desde España? Nuestro equipo especializado está aquí para ayudarte con todos tus trámites legales.</p>
+                    <div class="row g-0 mb-3">
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Apostillas oficiales</h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Legalizaciones rápidas</h6>
+                        </div>
+                    </div>
+                    <div class="row g-0 mb-3">
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Asesoría legal</h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Seguimiento completo</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="rounded h-100 d-flex align-items-center wow zoomIn" data-wow-delay="0.9s">
+                        <div class="card border-0 shadow-lg h-100 w-100">
+                            <div class="card-header bg-primary text-white text-center py-3">
+                                <i class="fab fa-whatsapp fa-2x mb-2"></i>
+                                <h4 class="mb-0">Contacto Rápido WhatsApp</h4>
+                                <p class="mb-0 small">Encomiendas Mixco - +34 642 900 609</p>
+                            </div>
+                            <div class="card-body p-4">
+                                <form id="contactWhatsAppForm">
+                                    <div class="mb-3">
+                                        <label for="userCountry" class="form-label">
+                                            <i class="fas fa-globe me-2"></i>Donde se encuentra usted:
+                                        </label>
+                                        <div class="country-selector">
+                                            <div class="country-option" data-value="España">
+                                                <img src="images/flags/spain.png" alt="Bandera España" class="flag-icon">
+                                                <span>España</span>
+                                            </div>
+                                            <div class="country-option" data-value="Honduras">
+                                                <img src="images/flags/honduras.png" alt="Bandera Honduras" class="flag-icon">
+                                                <span>Honduras</span>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" id="userCountry" name="userCountry" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="serviceType" class="form-label">
+                                            <i class="fas fa-box me-2"></i>Servicio que necesita:
+                                        </label>
+                                        <select class="form-select" id="serviceType" name="serviceType" required>
+                                            <option value="">Seleccione un servicio...</option>
+                                            <option value="Envío de paquetes">📦 Envío de paquetes</option>
+                                            <option value="Trámites legales y apostillas">⚖️ Trámites legales y apostillas</option>
+                                            <option value="Cotización de vuelos">✈️ Cotización de vuelos</option>
+                                            <option value="Seguimiento de envío">📱 Seguimiento de envío</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userMessage" class="form-label">
+                                            <i class="fas fa-comment me-2"></i>Mensaje adicional:
+                                        </label>
+                                        <textarea class="form-control" id="userMessage" name="userMessage" rows="3" 
+                                                  placeholder="Cuéntanos más detalles sobre tu solicitud..."></textarea>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-success btn-lg">
+                                            <i class="fab fa-whatsapp me-2"></i>Enviar por WhatsApp
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="text-center mt-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-info-circle me-1"></i>
+                                        Te redirigiremos a WhatsApp con tu mensaje preparado
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Formulario Incrustado End -->
 
     <!-- Footer Start -->
     <div class="bg-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -341,21 +442,24 @@
                                 <h3 class="mb-0">Enlaces</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Inicio</a>
-                                <a class="mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Paquetería</a>
-                                <a class="mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Trámites de documentos</a>
-                                <a class="mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Vuelos</a>
-                                <a class="mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contacto</a>
+                                <a class="mb-2" href="/" title="Inicio Encomiendas Mixco"><i class="bi bi-arrow-right text-primary me-2"></i>Inicio</a>
+                                <a class="mb-2" href="paqueteria" title="Paquetería Encomiendas Mixco"><i class="bi bi-arrow-right text-primary me-2"></i>Paquetería</a>
+                                <a class="mb-2" href="documentos" title="Trámites de documentos Encomiendas Mixco"><i class="bi bi-arrow-right text-primary me-2"></i>Trámites de documentos</a>
+                                <a class="mb-2" href="vuelos" title="Vuelos Encomiendas Mixco"><i class="bi bi-arrow-right text-primary me-2"></i>Vuelos</a>
+                                <a class="mb-2" href="blog" title="Blog Encomiendas Mixco"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="mb-2" href="contacto" title="Contacto Encomiendas Mixco"><i class="bi bi-arrow-right text-primary me-2"></i>Contacto</a>
                             </div>
                         </div>
-                        <!-- <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="mb-0">Links</h3>
+                                <h3 class="mb-0">Blog</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i> </a>
+                                <a class="mb-2" href="blog/envios-y-paqueteria/"><i class="bi bi-arrow-right text-primary me-2"></i>Envíos</a>
+                                <a class="mb-2" href="blog/tramites-legales/"><i class="bi bi-arrow-right text-primary me-2"></i>Trámites legales</a>
+                                <a class="mb-2" href="blog/historias-reales/"><i class="bi bi-arrow-right text-primary me-2"></i>Historias reales</a>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -381,6 +485,79 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Script para el formulario de WhatsApp -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactWhatsAppForm');
+            
+            // Manejar selección de países
+            const countryOptions = document.querySelectorAll('.country-option');
+            const hiddenCountryInput = document.getElementById('userCountry');
+            
+            countryOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remover selección previa
+                    countryOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Seleccionar la opción actual
+                    this.classList.add('selected');
+                    
+                    // Actualizar el campo oculto
+                    hiddenCountryInput.value = this.getAttribute('data-value');
+                });
+            });
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Obtener valores del formulario
+                    const userCountry = document.getElementById('userCountry').value;
+                    const serviceType = document.getElementById('serviceType').value;
+                    const userMessage = document.getElementById('userMessage').value;
+                    
+                    // Validar campos requeridos
+                    if (!userCountry || !serviceType) {
+                        alert('Por favor, completa todos los campos requeridos.');
+                        return;
+                    }
+                    
+                    // Construir mensaje estructurado
+                    let whatsappMessage = `Hola! Estoy en ${userCountry} y necesito información sobre: ${serviceType}\n\n`;
+                    
+                    if (userMessage.trim()) {
+                        whatsappMessage += `Mensaje adicional:\n${userMessage}\n\n`;
+                    }
+                    
+                    whatsappMessage += `Por favor, contáctame para más detalles.\n`;
+                    
+                    // Generar URL de WhatsApp
+                    const phoneNumber = '34642900609';
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+                    
+                    // Abrir WhatsApp
+                    window.open(whatsappUrl, '_blank');
+                    
+                    // Mostrar mensaje de confirmación
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>¡Enviado!';
+                    submitBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        form.reset();
+                        // Limpiar selección de países
+                        countryOptions.forEach(opt => opt.classList.remove('selected'));
+                        hiddenCountryInput.value = '';
+                    }, 3000);
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
