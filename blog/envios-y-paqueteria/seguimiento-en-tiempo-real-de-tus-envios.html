@@ -84,6 +84,8 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="../../lib/animate/animate.min.css" rel="stylesheet">
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -146,8 +148,8 @@
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                                         <h1 class="text-white animated zoomIn">📱 Seguimiento en tiempo real de tus envíos</h1>
-                     <p class="text-white-50 animated zoomIn" data-wow-delay="0.2s">Información actualizada y transparente en cada paso del viaje</p>
+                                         <h1 class="text-white ">📱 Seguimiento en tiempo real de tus envíos</h1>
+                     <p class="text-white-50 " >Información actualizada y transparente en cada paso del viaje</p>
                 </div>
             </div>
         </div>
@@ -169,7 +171,7 @@
     </div>
 
     <!-- Blog Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid py-5 " >
         <div class="container py-5">
             <div class="row g-5">
                 <!-- Main Content Column -->
@@ -187,7 +189,7 @@
                         <div>
                                                          <p class="lead">"¿Dónde está mi paquete?" Es la pregunta que más nos hacen las familias hondureñas en España. Sabemos que cuando envías algo a tu madre en Tegucigalpa o a tu hermano en San Pedro Sula, quieres saber exactamente dónde está en cada momento. Por eso trabajamos con un sistema de seguimiento que te mantiene informado desde que sale de Madrid hasta que llega a las manos de tu familia en Honduras.</p>
                             
-                            <img class="img-fluid w-100 rounded mb-5" src="../../images/blog-1.jpg" alt="Envío de paquetes a Honduras con comida, ropa y recuerdos">
+                            <img class="img-fluid w-100 rounded mb-5" src="../../images/encomiendas-mixco-logo.svg" alt="Envío de paquetes a Honduras con comida, ropa y recuerdos">
                             
                                                          <h2 class="text-primary">¿Cómo puedes rastrear tu paquete paso a paso?</h2>
                              
@@ -251,23 +253,101 @@
                     </div>
                     <!-- Blog Detail End -->
     
-                    <!-- Contact Form Start -->
-                    <div class="bg-light rounded p-5 mt-5 pt-5 border-top">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0"><i class="fa fa-paper-plane"></i> ¿No encuentras tu paquete?</h3>
-                        </div>
-                        <p class="mb-4">¿Tienes dudas sobre la ubicación de tu paquete? Cuéntanos tu situación y te ayudaremos a localizarlo inmediatamente.</p>
-                        <div class="rounded h-100 d-flex align-items-center wow zoomIn" data-wow-delay="0.9s">
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCZtxOtvJz8Dof2bsFFx8W_c_GtwwvAijmKo3XsSPPE0yA7w/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-                        </div>
+                    <!-- Formulario Incrustado Start -->
+                    <div class="container-fluid py-5">
+                            <div class="row g-5">
+                                <div class="col-lg-7">
+                                    <div class="section-title position-relative pb-3 mb-5">
+                                        <h1 class="mb-0">¿No encuentra su encomienda?</h1>
+                                    </div>
+                                    <p class="mb-4">¿Tiene dudas sobre la ubicación de su envío? Cuéntenos su situación y le ayudaremos a localizarlo inmediatamente.</p>
+                                    <div class="row g-0 mb-3">
+                                        <div class="col-sm-6">
+                                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Seguimiento inmediato</h6>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Respuesta rápida</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row g-0 mb-3">
+                                        <div class="col-sm-6">
+                                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Ubicación exacta</h6>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Soporte 24/7</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="rounded h-100 d-flex align-items-center">
+                                        <div class="card border-0 shadow-lg h-100 w-100">
+                                            <div class="card-header bg-primary text-white text-center py-3">
+                                                <i class="fab fa-whatsapp fa-2x mb-2"></i>
+                                                <h4 class="mb-0">Contacto Rápido WhatsApp</h4>
+                                                <p class="mb-0 small">Encomiendas Mixco - +34 642 900 609</p>
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <form id="contactWhatsAppForm">
+                                                    <div class="mb-3">
+                                                        <label for="userCountry" class="form-label">
+                                                            <i class="fas fa-globe me-2"></i>Donde se encuentra usted:
+                                                        </label>
+                                                        <div class="country-selector">
+                                                            <div class="country-option" data-value="España">
+                                                                <img src="../../images/flags/spain.png" alt="Bandera España" class="flag-icon">
+                                                                <span>España</span>
+                                                            </div>
+                                                            <div class="country-option" data-value="Honduras">
+                                                                <img src="../../images/flags/honduras.png" alt="Bandera Honduras" class="flag-icon">
+                                                                <span>Honduras</span>
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" id="userCountry" name="userCountry" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="serviceType" class="form-label">
+                                                            <i class="fas fa-box me-2"></i>Servicio que necesita:
+                                                        </label>
+                                                        <select class="form-select" id="serviceType" name="serviceType" required>
+                                                            <option value="">Seleccione un servicio...</option>
+                                                            <option value="Envío de paquetes">📦 Envío de paquetes</option>
+                                                            <option value="Trámites legales y apostillas">⚖️ Trámites legales y apostillas</option>
+                                                            <option value="Cotización de vuelos">✈️ Cotización de vuelos</option>
+                                                            <option value="Seguimiento de envío">📱 Seguimiento de envío</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="userMessage" class="form-label">
+                                                            <i class="fas fa-comment me-2"></i>Mensaje adicional:
+                                                        </label>
+                                                        <textarea class="form-control" id="userMessage" name="userMessage" rows="3" 
+                                                                  placeholder="Cuéntanos más detalles sobre tu solicitud..."></textarea>
+                                                    </div>
+                                                    <div class="d-grid">
+                                                        <button type="submit" class="btn btn-success btn-lg">
+                                                            <i class="fab fa-whatsapp me-2"></i>Enviar por WhatsApp
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                                <div class="text-center mt-3">
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-info-circle me-1"></i>
+                                                        Te redirigiremos a WhatsApp con tu mensaje preparado
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-                    <!-- Contact Form End -->
+                    <!-- Formulario Incrustado End -->
                 </div>
     
                 <!-- Sidebar Start -->
                 <div class="col-lg-4">    
                     <!-- Recent Posts Widget -->
-                    <div class="bg-light rounded p-4 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="bg-light rounded p-4 mb-4 " >
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0"><i class="fa fa-newspaper"></i> Entradas recientes</h3>
                         </div>
@@ -306,18 +386,9 @@
                                 <h6 class="mb-1"><a href="seguimiento-en-tiempo-real-de-tus-envios" class="text-decoration-none">📱 Seguimiento en tiempo real</a></h6>
                             </div>
                         </div>
-    
-                    <!-- Featured Image Widget -->
-                    <div class="bg-light rounded p-4 mb-4 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0"><i class="fa fa-image"></i> Imagen destacada</h3>
-                        </div>
-                        <img src="../../images/blog-1.jpg" alt="Envíos a Honduras" class="img-fluid rounded" />
-                        <p class="mt-3 text-muted small">Nuestro equipo preparando envíos con cuidado y dedicación para llegar a todas las familias hondureñas.</p>
-                    </div>
-    
+        
                     <!-- Tags Widget -->
-                    <div class="bg-light rounded p-4 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="bg-light rounded p-4 mb-4 " >
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0"><i class="fa fa-tags"></i> Etiquetas populares</h3>
                         </div>
@@ -338,7 +409,7 @@
                     </div>
     
                     <!-- Contact Info Widget -->
-                    <div class="bg-light rounded p-4 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="bg-light rounded p-4 mb-4 " >
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0"><i class="fa fa-phone"></i> ¿Necesitas ayuda?</h3>
                         </div>
@@ -350,36 +421,17 @@
                             <p class="mt-3 small text-muted">+34 642 900 609</p>
                         </div>
                     </div>
-                </div>
+                    </div>
                 <!-- Sidebar End -->
             </div>
         </div>
     </div>
+    </div>
     <!-- Blog End -->
 
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel">
-                    <img src="../../images/vendor-1.jpg" alt="">
-                    <img src="../../images/vendor-2.jpg" alt="">
-                    <img src="../../images/vendor-3.jpg" alt="">
-                    <img src="../../images/vendor-4.jpg" alt="">
-                    <img src="../../images/vendor-5.jpg" alt="">
-                    <img src="../../images/vendor-6.jpg" alt="">
-                    <img src="../../images/vendor-7.jpg" alt="">
-                    <img src="../../images/vendor-8.jpg" alt="">
-                    <img src="../../images/vendor-9.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor End -->
-    
 
     <!-- Footer Start -->
-    <div class="bg-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="bg-light mt-5 " >
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
@@ -436,9 +488,9 @@
                                 <h3 class="mb-0">Blog</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="mb-2" href="que-puedes-enviar-a-honduras-comida-ropa-y-recuerdos"><i class="bi bi-arrow-right text-primary me-2"></i>Envíos</a>
-                                <a class="mb-2" href="que-puedes-enviar-a-honduras-comida-ropa-y-recuerdos"><i class="bi bi-arrow-right text-primary me-2"></i>Trámites legales</a>
-                                <a class="mb-2" href="que-puedes-enviar-a-honduras-comida-ropa-y-recuerdos"><i class="bi bi-arrow-right text-primary me-2"></i>Historias reales</a>
+                                <a class="mb-2" href="/blog/envios-y-paqueteria/"><i class="bi bi-arrow-right text-primary me-2"></i>Envíos</a>
+                                <a class="mb-2" href="/blog/tramites-legales/"><i class="bi bi-arrow-right text-primary me-2"></i>Trámites legales</a>
+                                <a class="mb-2" href="/blog/historias-reales/"><i class="bi bi-arrow-right text-primary me-2"></i>Historias reales</a>
                             </div>
                         </div>
                     </div>
@@ -466,7 +518,81 @@
     <script src="../../lib/counterup/counterup.min.js"></script>
     <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../../js/main.js"></script>
+    
+    <!-- Script para el formulario de WhatsApp -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactWhatsAppForm');
+            
+            // Manejar selección de países
+            const countryOptions = document.querySelectorAll('.country-option');
+            const hiddenCountryInput = document.getElementById('userCountry');
+            
+            countryOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remover selección previa
+                    countryOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Seleccionar la opción actual
+                    this.classList.add('selected');
+                    
+                    // Actualizar el campo oculto
+                    hiddenCountryInput.value = this.getAttribute('data-value');
+                });
+            });
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Obtener valores del formulario
+                    const userCountry = document.getElementById('userCountry').value;
+                    const serviceType = document.getElementById('serviceType').value;
+                    const userMessage = document.getElementById('userMessage').value;
+                    
+                    // Validar campos requeridos
+                    if (!userCountry || !serviceType) {
+                        alert('Por favor, completa todos los campos requeridos.');
+                        return;
+                    }
+                    
+                    // Construir mensaje estructurado
+                    let whatsappMessage = `Hola! Estoy en ${userCountry} y necesito información sobre: ${serviceType}\n\n`;
+                    
+                    if (userMessage.trim()) {
+                        whatsappMessage += `Mensaje adicional:\n${userMessage}\n\n`;
+                    }
+                    
+                    whatsappMessage += `Por favor, contáctame para más detalles.\n`;
+                    
+                    // Generar URL de WhatsApp
+                    const phoneNumber = '34642900609';
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+                    
+                    // Abrir WhatsApp
+                    window.open(whatsappUrl, '_blank');
+                    
+                    // Mostrar mensaje de confirmación
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>¡Enviado!';
+                    submitBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        form.reset();
+                        // Limpiar selección de países
+                        countryOptions.forEach(opt => opt.classList.remove('selected'));
+                        hiddenCountryInput.value = '';
+                    }, 3000);
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>
 
 
