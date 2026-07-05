@@ -41,13 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Close mobile nav when clicking a link (except the dropdown toggle)
-        const mobileLinks = mobileNav.querySelectorAll('.nav-link:not(.nav-link-dropdown)');
+        const mobileLinks = mobileNav.querySelectorAll('.nav-link, .dropdown-item, .mobile-nav-logo');
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('open');
-                mobileNav.classList.remove('open');
-                document.body.style.overflow = '';
-            });
+            if (!link.classList.contains('nav-link-dropdown')) {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('open');
+                    mobileNav.classList.remove('open');
+                    document.body.style.overflow = '';
+                });
+            }
         });
 
         // Dropdown accordion logic
