@@ -1,5 +1,35 @@
 User-agent: *
 Allow: /
 
+# Directivas para crawlers de IA y motores de búsqueda semántica
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Archivos de contexto para Modelos de Lenguaje (LLMs)
+# https://llmstxt.org/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
 # Sitemaps
 Sitemap: https://encomiendasmixco.es/sitemap.xml

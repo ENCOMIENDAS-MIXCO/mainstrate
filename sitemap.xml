@@ -1,117 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- PÁGINAS PRINCIPALES DE CONVERSIÓN Y SERVICIOS -->
   <url>
-    <loc>https://encomiendasmixco.es</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/documentos</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://encomiendasmixco.es/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://encomiendasmixco.es/paqueteria</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://encomiendasmixco.es/documentos</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://encomiendasmixco.es/vuelos</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://encomiendasmixco.es/contacto</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
+    <priority>0.90</priority>
   </url>
+
+  <!-- HUB PRINCIPAL DEL BLOG -->
+  <url>
+    <loc>https://encomiendasmixco.es/blog/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- CATEGORÍAS DEL BLOG -->
+  <url>
+    <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://encomiendasmixco.es/blog/tramites-legales/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://encomiendasmixco.es/blog/historias-reales/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ARTÍCULOS DE GUÍAS Y ENVÍOS -->
+  <url>
+    <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/como-embalar-correctamente-tus-paquetes.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/guia-rapida-para-enviar-paquetes-a-Honduras.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/que-puedes-enviar-a-honduras-comida-ropa-y-recuerdos.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ARTÍCULOS DE TRÁMITES LEGALES -->
+  <url>
+    <loc>https://encomiendasmixco.es/blog/tramites-legales/apostillas-paso-a-paso-guia-visual.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ARTÍCULOS DE HISTORIAS REALES -->
+  <url>
+    <loc>https://encomiendasmixco.es/blog/historias-reales/ana-y-su-comunidad-el-poder-de-la-solidaridad.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://encomiendasmixco.es/blog/historias-reales/carlos-y-su-abuela-el-paquete-que-curo-la-nostalgia.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://encomiendasmixco.es/blog/historias-reales/rosa-y-su-paquete-cuando-una-caja-se-convierte-en-abrazo.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- PÁGINAS LEGALES -->
   <url>
     <loc>https://encomiendasmixco.es/aviso-legal</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/cookies</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.50</priority>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
   </url>
   <url>
     <loc>https://encomiendasmixco.es/privacidad</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.50</priority>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
   </url>
   <url>
-    <loc>https://encomiendasmixco.es/blog</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/como-embalar-correctamente-tus-paquetes</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/guia-rapida-para-enviar-paquetes-a-Honduras</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.60</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/envios-y-paqueteria/que-puedes-enviar-a-honduras-comida-ropa-y-recuerdos</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/historias-reales/ana-y-su-comunidad-el-poder-de-la-solidaridad</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/historias-reales/carlos-y-su-abuela-el-paquete-que-curo-la-nostalgia</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/tramites-legales</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/historias-reales</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/historias-reales/rosa-y-su-paquete-cuando-una-caja-se-convierte-en-abrazo</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://encomiendasmixco.es/blog/tramites-legales/apostillas-paso-a-paso-guia-visual</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <loc>https://encomiendasmixco.es/cookies</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
   </url>
 </urlset>
