@@ -19,6 +19,7 @@
     --brand-orange-glow: 0 10px 30px -5px rgba(255,90,31,0.35);
 
     --text-primary: #111111;
+    --text-base: #111111;
     --text-muted: #5E6E82;
     --text-light: #FFFFFF;
 
@@ -143,13 +144,14 @@ ul { list-style: none; }
     font-size: 0.95rem;
     border-radius: var(--radius-full);
     cursor: pointer;
-    border: 1px solid;
+    border: none;
     transition: var(--transition);
     white-space: nowrap;
 }
 .btn-primary {
     background: var(--brand-orange);
     color: #fff;
+    border: 1px solid var(--brand-orange);
 }
 .btn-primary:hover {
     background: var(--brand-orange-hover);
@@ -1297,7 +1299,11 @@ footer {
     padding-top: 1rem;
     border-top: 1px solid var(--border);
 }
-.blog-card-date { display: none; }
+.blog-card-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
 .blog-card-read {
     font-size: 0.82rem;
     font-weight: 700;
@@ -1375,7 +1381,7 @@ footer {
     color: #fff;
 }
 .post-author-name { font-size: 0.88rem; font-weight: 700; color: var(--text-primary); }
-.post-author-date { display: none; }
+.post-author-date { font-size: 0.78rem; color: var(--text-muted); }
 .post-read-time {
     font-size: 0.82rem;
     color: var(--text-muted);
