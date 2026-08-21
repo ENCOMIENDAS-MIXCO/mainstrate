@@ -231,6 +231,65 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // --- 6.1 CALCULADORA AÉREA DE PAQUETERÍA (HONDURAS EN LIBRAS) ---
+    const airCalcForm = document.getElementById('airCalcForm');
+    if (airCalcForm) {
+        const airLargo = document.getElementById('calcLargo');
+        const airAncho = document.getElementById('calcAncho');
+        const airAlto = document.getElementById('calcAlto');
+        const airPeso = document.getElementById('calcPeso');
+        const airResultBox = document.getElementById('calcAirResult');
+        const airPriceEl = document.getElementById('calcAirPrice');
+        const airDetailEl = document.getElementById('calcAirDetail');
+        const airWABtn = document.getElementById('calcAirWhatsAppBtn');
+
+        // Tarifa por libra España -> Honduras
+        const tarifaPorLibra = 7.0;
+
+        airCalcForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const largo = parseFloat(airLargo.value) || 0;
+            const ancho = parseFloat(airAncho.value) || 0;
+            const alto = parseFloat(airAlto.value) || 0;
+            const pesoRealLbs = parseFloat(airPeso.value) || 0;
+            const pais = 'Honduras';
+
+            if (largo <= 0 || ancho <= 0 || alto <= 0 || pesoRealLbs <= 0) {
+                alert('Por favor, complete todas las dimensiones y el peso en libras.');
+                return;
+            }
+
+            // Cálculo peso volumétrico en libras (L * A * H en cm / 2270 aprox. = 5000 / 2.20462)
+            const pesoVolLbs = Math.ceil((largo * ancho * alto) / 2270);
+            const pesoFacturableLbs = Math.max(pesoRealLbs, pesoVolLbs);
+            const precioTotal = pesoFacturableLbs * tarifaPorLibra;
+            const criterio = pesoVolLbs > pesoRealLbs 
+                ? `Cobro por volumen: ${pesoVolLbs} lbs volumétricas (mayor a ${pesoRealLbs} lbs reales)` 
+                : `Cobro por peso real: ${pesoRealLbs} lbs`;
+
+            if (airPriceEl) airPriceEl.textContent = `${precioTotal.toFixed(2)} €`;
+            if (airDetailEl) {
+                airDetailEl.innerHTML = `<strong>Destino:</strong> 🇭🇳 ${pais}<br><strong>Medidas:</strong> ${largo}&times;${ancho}&times;${alto} cm<br><strong>Peso facturable:</strong> ${pesoFacturableLbs} lbs (€${tarifaPorLibra.toFixed(2)} / lb)<br><strong>Criterio:</strong> ${criterio}`;
+            }
+
+            if (airWABtn) {
+                const msg = `*Cotización de Paquetería Aérea a Honduras*\n\n` +
+                            `*País Destino:* Honduras 🇭🇳\n` +
+                            `*Medidas:* ${largo}x${ancho}x${alto} cm\n` +
+                            `*Peso Real:* ${pesoRealLbs} lbs\n` +
+                            `*Peso Volumétrico:* ${pesoVolLbs} lbs\n` +
+                            `*Tarifa:* €${tarifaPorLibra} / lb\n` +
+                            `*Precio Estimado:* ${precioTotal.toFixed(2)} €\n\n` +
+                            `¡Hola! He calculado esta tarifa aérea para Honduras en la web y deseo coordinar mi envío.`;
+                airWABtn.href = `https://api.whatsapp.com/send?phone=34642900609&text=${encodeURIComponent(msg)}`;
+            }
+
+            if (airResultBox) {
+                airResultBox.classList.add('active');
+            }
+        });
+    }
+
     // --- 7. FAQ ACCORDIONS (SMOOTH SLIDE HEIGHT) ---
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {

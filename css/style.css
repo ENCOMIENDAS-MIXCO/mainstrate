@@ -750,7 +750,6 @@ header {
 /* --- 16. CONTACT FORM --- */
 .contact-section { padding: 6rem 0; }
 .contact-grid { align-items: start; gap: 4rem; }
-.contact-info { }
 .contact-info .section-title { text-align: left; }
 .contact-info p { margin: 1rem 0 2rem; }
 .contact-meta-row {
@@ -904,7 +903,7 @@ footer {
     gap: 2.5rem;
     margin-bottom: 3rem;
 }
-.footer-logo { height: 3rem; margin-bottom: 1.25rem; }
+.footer-logo { height: 6rem; width: auto; max-width: 100%; object-fit: contain; margin-bottom: 1.25rem; }
 .footer-desc { font-size: 0.9rem; line-height: 1.7; color: #718096; margin-bottom: 1.5rem; }
 .social-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .social-btn {
@@ -1808,9 +1807,1315 @@ svg.dropdown-icon { width: 10px !important; height: 10px !important; }
     width: auto;
 }
 
-/* Post Wrapper Mobile Constraint */
+/* --- 26. REESTRUCTURACIÓN PAQUETERÍA (AÉREO / MARÍTIMO) --- */
+.service-nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2.25rem auto 3.5rem;
+    flex-wrap: nowrap;
+    max-width: 1100px;
+    width: 100%;
+}
 @media (max-width: 768px) {
-    .post-content-wrapper {
-        max-width: 90% !important;
+    .service-nav-tabs {
+        flex-wrap: wrap;
+        gap: 0.85rem;
     }
 }
+
+.service-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.95rem 1.75rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    white-space: nowrap;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.service-tab-btn .tab-icon {
+    font-size: 1.3rem;
+}
+.service-tab-btn:hover {
+    border-color: var(--brand-orange);
+    color: var(--brand-orange);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.service-tab-btn.active {
+    background: var(--brand-orange);
+    border-color: var(--brand-orange);
+    color: #fff;
+    box-shadow: var(--brand-orange-glow);
+}
+.service-tab-btn.active.tab-sea {
+    background: linear-gradient(135deg, #0A4D68 0%, #088395 100%);
+    border-color: #0A4D68;
+    box-shadow: 0 10px 30px -5px rgba(10, 77, 104, 0.35);
+}
+
+.service-block-aereo {
+    display: block;
+    position: relative;
+    scroll-margin-top: 100px;
+    background: linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 50%, #FFF9F5 100%);
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.service-block-maritimo {
+    display: block;
+    position: relative;
+    scroll-margin-top: 100px;
+    background: linear-gradient(180deg, #F0F9FA 0%, #F8FCFD 40%, #EBF6F9 100%);
+    border-top: 3px solid #088395;
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+}
+
+/* Badge de sección grande para diferenciar Aéreo vs Marítimo */
+.mode-banner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.mode-banner-air {
+    background: linear-gradient(135deg, rgba(255,90,31,0.1) 0%, rgba(255,142,83,0.05) 100%);
+    border: 1.5px solid rgba(255,90,31,0.25);
+}
+.mode-banner-sea {
+    background: linear-gradient(135deg, rgba(10,77,104,0.12) 0%, rgba(8,131,149,0.08) 100%);
+    border: 1.5px solid rgba(8,131,149,0.3);
+}
+.mode-banner-title {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+.mode-banner-air .mode-banner-title {
+    color: var(--brand-orange);
+}
+.mode-banner-sea .mode-banner-title {
+    color: #0A4D68;
+}
+.mode-banner-pill {
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.mode-banner-air .mode-banner-pill {
+    background: var(--brand-orange);
+    color: #fff;
+}
+.mode-banner-sea .mode-banner-pill {
+    background: #0A4D68;
+    color: #fff;
+}
+
+/* Calculadora Aérea Integrada */
+.calc-card-container {
+    background: var(--bg-card);
+
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    margin: 3rem 0 5rem;
+}
+.calc-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@media (min-width: 992px) {
+    .calc-grid-layout {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+}
+.calc-form-pane {
+    padding: 3rem 2.5rem;
+}
+.calc-info-pane {
+    background: linear-gradient(145deg, rgba(255,90,31,0.06) 0%, var(--bg-hover) 100%);
+    padding: 3rem 2.5rem;
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.calc-row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.calc-row-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+@media (max-width: 600px) {
+    .calc-row-3, .calc-row-2 {
+        grid-template-columns: 1fr;
+    }
+    .calc-form-pane, .calc-info-pane {
+        padding: 2rem 1.5rem;
+    }
+}
+
+.calc-result-box {
+    margin-top: 1.75rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-hover);
+    border: 1.5px solid var(--brand-orange-light);
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.calc-result-box.active {
+    display: flex;
+}
+.calc-price-highlight {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--brand-orange);
+    font-family: var(--font-heading);
+}
+
+/* Tarjetas Cajas Marítimas */
+.maritime-box-card {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: var(--transition);
+}
+.maritime-box-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: #088395;
+}
+.maritime-box-card.featured-box {
+    border-color: #0A4D68;
+    background: linear-gradient(160deg, rgba(8, 131, 149, 0.05) 0%, var(--bg-card) 60%);
+    box-shadow: var(--shadow-xl), 0 0 0 1px #088395;
+}
+.maritime-tag {
+    display: inline-block;
+    background: rgba(10, 77, 104, 0.1);
+    color: #0A4D68;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+.box-weight-badge {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #0A4D68;
+    font-family: var(--font-heading);
+    margin: 0.5rem 0;
+}
+.box-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-grow: 1;
+}
+.box-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.93rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+}
+.box-info-item span:first-child {
+    flex-shrink: 0;
+    font-size: 1rem;
+    margin-top: 0.05rem;
+}
+.box-info-item strong {
+    color: var(--text-primary);
+}
+
+/* --- SECCIÓN VIDEO SHOWCASE: PROCESO DE EMBALAJE Y PLASTIFICADO --- */
+.maritime-video-section {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.maritime-video-card {
+    background: #ffffff;
+    border: 1.5px solid rgba(8, 131, 149, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px -5px rgba(10, 77, 104, 0.06);
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+}
+@media (max-width: 960px) {
+    .maritime-video-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.75rem 1.5rem;
+    }
+}
+.maritime-video-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.maritime-video-title {
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    font-weight: 800;
+    color: #0A4D68;
+    line-height: 1.25;
+}
+.maritime-video-desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+}
+.maritime-video-features {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.maritime-video-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.maritime-video-feature-item svg {
+    color: #088395;
+    flex-shrink: 0;
+}
+.maritime-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    aspect-ratio: 9/16;
+    max-height: 520px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: #000;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(8, 131, 149, 0.2);
+}
+.maritime-video-container iframe,
+.maritime-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* Alerta / Badge de Dimensiones e Información Pendiente */
+.pending-dimension-notice {
+    background: #FFF7ED;
+    border: 1.5px dashed #F97316;
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1rem;
+    color: #9A3412;
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+.pending-dimension-notice svg {
+    flex-shrink: 0;
+    color: #EA580C;
+}
+
+/* Países / Destinos Marítimos Grid (7 países equilibrados) */
+.country-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+@media (min-width: 1024px) {
+    .country-cards-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+    .country-cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .country-cards-grid > .country-dest-card:last-child {
+        grid-column: span 2;
+        justify-content: center;
+    }
+}
+@media (max-width: 639px) {
+    .country-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .country-cards-grid > .country-dest-card:last-child {
+        grid-column: span 2;
+        justify-content: center;
+    }
+}
+.country-dest-card {
+    background: #ffffff;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.9rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+.country-dest-card:hover {
+    border-color: #088395;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(8, 131, 149, 0.15);
+    background: linear-gradient(180deg, #ffffff 0%, rgba(8, 131, 149, 0.05) 100%);
+}
+.country-dest-card img {
+    width: 60px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+.country-dest-card:hover img {
+    transform: scale(1.08);
+}
+.country-dest-card strong {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+.country-dest-card .dest-time {
+    font-size: 0.82rem;
+    color: #0A4D68;
+    background: rgba(10, 77, 104, 0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+}
+
+
+/* Componentes estilizados para Paquetería (Sin inline styles) */
+.country-badge-field {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--bg-hover);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+.country-badge-field img {
+    width: 26px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.calc-disclaimer-alert {
+    background: rgba(255,90,31,0.08);
+    border-left: 3px solid var(--brand-orange);
+    border-radius: var(--radius-xs);
+    padding: 0.75rem 0.9rem;
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin: 0.25rem 0;
+}
+
+.calc-info-note {
+    background: #FFF7ED;
+    border: 1px solid #FFEDD5;
+    border-radius: var(--radius-xs);
+    padding: 0.75rem 0.9rem;
+    font-size: 0.82rem;
+    color: #9A3412;
+    line-height: 1.5;
+}
+
+.calc-info-list-box {
+    background: rgba(255,255,255,0.7);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    border: 1px solid var(--border);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.box-dimension-box {
+    background: rgba(10,77,104,0.06);
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    margin: 1rem 0;
+    border-left: 3px solid #0A4D68;
+}
+.box-dimension-label {
+    font-size: 0.82rem;
+    color: #0A4D68;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.box-dimension-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.box-penalty-note {
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-radius: var(--radius-xs);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.8rem;
+    color: #92400E;
+    margin-top: 0.75rem;
+    line-height: 1.45;
+}
+
+.maritime-coverage-pill {
+    background: rgba(10,77,104,0.08);
+    border-color: rgba(10,77,104,0.2);
+    color: #0A4D68;
+}
+
+.maritime-intro-wrap {
+    margin-top: 1rem;
+}
+.maritime-intro-card {
+    background: linear-gradient(135deg, rgba(10,77,104,0.06) 0%, rgba(8,131,149,0.02) 100%);
+    border-color: rgba(10,77,104,0.2);
+}
+.maritime-intro-grid {
+    align-items: center;
+    gap: 3rem;
+}
+.maritime-intro-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    color: #0A4D68;
+    margin-bottom: 1rem;
+}
+.prohibited-subheading {
+    color: #742A2A;
+    margin-bottom: 0;
+}
+.packing-tips-container {
+    margin-top: 3rem;
+}
+.section-tag-sea {
+    color: #0A4D68;
+}
+.subheading-no-margin {
+    margin-bottom: 0;
+}
+.process-step-num-sea {
+    background: #0A4D68;
+}
+.direct-whatsapp-section {
+    padding-bottom: 5rem;
+}
+.btn-direct-call {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 0.85rem 1.5rem;
+}
+.btn-direct-call:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #fff;
+    color: #fff;
+}
+.maritime-intro-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+.maritime-features-flex {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.maritime-feature-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: #0A4D68;
+}
+.maritime-steps-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--border);
+    box-shadow: var(--shadow-md);
+}
+.maritime-steps-title {
+    font-size: 1.2rem;
+    color: #0A4D68;
+    margin-bottom: 1rem;
+}
+.maritime-steps-box ol {
+    padding-left: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin: 0;
+}
+.py-maritime-dest {
+    padding: 4rem 1.5rem 2rem;
+}
+.text-sea-color {
+    color: #0A4D68 !important;
+}
+.bg-hover-section {
+    background: var(--bg-hover);
+}
+.box-card-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+.badge-tag-highlight {
+    background: #0A4D68 !important;
+    color: #fff !important;
+}
+.btn-sea-card {
+    margin-top: 1.5rem;
+    background: #0A4D68;
+    border-color: #0A4D68;
+}
+.btn-sea-gradient {
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #0A4D68 0%, #088395 100%);
+    border-color: #0A4D68;
+}
+.maritime-zones-card {
+    margin-top: 3rem;
+    background: #fff;
+    border-left: 4px solid #0A4D68;
+}
+.maritime-zones-title {
+    font-size: 1.25rem;
+    color: #0A4D68;
+    margin-bottom: 0.75rem;
+}
+.maritime-zones-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+.calc-heading {
+    font-size: 1.85rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+.calc-subheading {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.btn-full-padding {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.05rem;
+}
+.calc-result-tag {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+}
+.calc-result-detail {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+.hero-calc-icon {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+.calc-info-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+.calc-info-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+/* --- Hero Comparativa Rápida (Aéreo vs Marítimo - Diseño Premium & Amplio) --- */
+.page-hero-content.page-hero-wide {
+    max-width: 1100px;
+}
+.quick-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 3rem auto 0;
+    max-width: 1100px;
+    width: 100%;
+    text-align: left;
+}
+@media (max-width: 960px) {
+    .quick-comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.quick-compare-card {
+    background: #ffffff;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.quick-compare-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+.quick-compare-card.air-accent {
+    background: linear-gradient(180deg, rgba(255, 90, 31, 0.03) 0%, #FFFFFF 35%);
+}
+.quick-compare-card.air-accent:hover {
+    border-color: var(--brand-orange);
+}
+.quick-compare-card.sea-accent {
+    background: linear-gradient(180deg, rgba(8, 131, 149, 0.03) 0%, #FFFFFF 35%);
+}
+.quick-compare-card.sea-accent:hover {
+    border-color: #088395;
+}
+
+.quick-compare-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+}
+.quick-compare-title-group {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    min-width: 0;
+}
+.quick-compare-icon-bubble {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+.air-accent .quick-compare-icon-bubble {
+    background: rgba(255, 90, 31, 0.12);
+    color: var(--brand-orange);
+}
+.sea-accent .quick-compare-icon-bubble {
+    background: rgba(8, 131, 149, 0.12);
+    color: #0A4D68;
+}
+.quick-compare-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.quick-compare-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 0.2rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.quick-compare-subtitle img {
+    width: 18px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+
+.quick-compare-badge {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.badge-air {
+    background: rgba(255, 90, 31, 0.12);
+    color: var(--brand-orange);
+    border: 1px solid rgba(255, 90, 31, 0.25);
+}
+.badge-sea {
+    background: rgba(10, 77, 104, 0.12);
+    color: #0A4D68;
+    border: 1px solid rgba(8, 131, 149, 0.25);
+}
+
+.quick-compare-countries-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+.quick-country-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: var(--bg-hover);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 0.2rem 0.6rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.quick-country-tag img {
+    width: 16px;
+    height: auto;
+    border-radius: 2px;
+}
+
+
+.quick-compare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.quick-compare-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+}
+.quick-compare-list li strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+.quick-compare-list .list-ico {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--bg-hover);
+    border-radius: 50%;
+    margin-top: 0.05rem;
+}
+
+.quick-compare-footer {
+    padding-top: 1.25rem;
+    border-top: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.quick-compare-tagline {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.quick-compare-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.air-accent .quick-compare-cta {
+    color: var(--brand-orange);
+}
+.sea-accent .quick-compare-cta {
+    color: #088395;
+}
+.quick-compare-cta:hover {
+    transform: translateX(3px);
+}
+
+
+/* Margen superior armónico para el botón de la calculadora */
+.btn-calc-submit {
+    margin-top: 1.25rem;
+}
+
+/* Rediseño de Nota Explicativa de Zonas de Recogida */
+.maritime-zones-card {
+    margin-top: 3rem;
+    background: #ffffff;
+    border: 1.5px solid rgba(8, 131, 149, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    box-shadow: 0 4px 20px rgba(10, 77, 104, 0.05);
+}
+.maritime-zones-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.maritime-zones-title {
+    font-size: 1.25rem;
+    color: #0A4D68;
+    font-weight: 800;
+    margin: 0;
+}
+.maritime-zones-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+.maritime-zones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+.maritime-zone-box {
+    background: rgba(10, 77, 104, 0.04);
+    border: 1px solid rgba(8, 131, 149, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0A4D68;
+    transition: var(--transition);
+}
+.maritime-zone-box:hover {
+    background: rgba(10, 77, 104, 0.08);
+    border-color: #088395;
+    transform: translateY(-2px);
+}
+
+
+/* --- Artículos Prohibidos / Restringidos (Maquetación 3x2 Simétrica) --- */
+.prohibited-card {
+    background: #FFF5F5;
+    border: 1.5px dashed #FEB2B2;
+    border-radius: var(--radius-md);
+    padding: 2.25rem 2rem;
+    margin-top: 3.5rem;
+}
+.prohibited-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.prohibited-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #9B2C2C;
+}
+.prohibited-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+@media (max-width: 900px) {
+    .prohibited-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .prohibited-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.prohibited-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #742A2A;
+    background: #ffffff;
+    padding: 0.85rem 1.1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(254, 178, 178, 0.6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+.prohibited-item:hover {
+    border-color: #FEB2B2;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+.prohibited-icon-badge {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #FFF5F5;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+
+/* --- Tips de Embalaje para Cajas Marítimas --- */
+.packing-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+.packing-tip-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.packing-tip-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+.packing-tip-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.35rem;
+}
+.packing-tip-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Banner de Asistencia Directa WhatsApp (Diseño Premium Harmonioso) --- */
+.direct-whatsapp-card {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0A4D68 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 2.5rem;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+}
+.direct-whatsapp-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(37, 211, 102, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+}
+.direct-whatsapp-card .section-tag {
+    background: rgba(37, 211, 102, 0.15);
+    color: #25D366;
+    border: 1px solid rgba(37, 211, 102, 0.35);
+    font-weight: 700;
+}
+.direct-whatsapp-title {
+    font-size: clamp(1.85rem, 3.5vw, 2.6rem);
+    font-weight: 900;
+    color: #ffffff;
+    margin: 1rem 0 1.25rem;
+    letter-spacing: -0.02em;
+}
+.direct-whatsapp-desc {
+    font-size: 1.05rem;
+    color: #CBD5E1;
+    max-width: 680px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
+}
+.direct-whatsapp-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.direct-whatsapp-actions .btn-whatsapp-premium {
+    width: auto;
+    margin-top: 0;
+    padding: 1.05rem 2rem;
+    font-size: 1.02rem;
+    font-weight: 700;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+    flex: 1 1 280px;
+    justify-content: center;
+    height: 56px;
+}
+.btn-direct-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    height: 56px;
+    padding: 1.05rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.02rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+    flex: 1 1 280px;
+    backdrop-filter: blur(8px);
+}
+.btn-direct-call:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+}
+
+/* --- Estilos Específicos Marítimos para Permitidos / Prohibidos y FAQs --- */
+.sea-allowed-card {
+    background: #ffffff;
+    border: 1px solid rgba(8, 131, 149, 0.25);
+    border-radius: var(--radius-md);
+    padding: 2.25rem 2rem;
+    margin-top: 3rem;
+    box-shadow: 0 4px 20px rgba(10, 77, 104, 0.05);
+}
+.sea-allowed-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.sea-allowed-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0A4D68;
+}
+.sea-allowed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+@media (max-width: 900px) {
+    .sea-allowed-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .sea-allowed-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.sea-allowed-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #0A4D68;
+    background: rgba(10, 77, 104, 0.04);
+    padding: 0.85rem 1.1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(8, 131, 149, 0.2);
+    transition: var(--transition);
+}
+.sea-allowed-item:hover {
+    border-color: #088395;
+    background: rgba(10, 77, 104, 0.08);
+    transform: translateY(-2px);
+}
+.sea-icon-badge {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #EBF6F9;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* FAQ Marítimo Theme */
+.faq-sea-theme .faq-item {
+    border-color: rgba(8, 131, 149, 0.2);
+}
+.faq-sea-theme .faq-trigger:hover {
+    color: #0A4D68;
+}
+.faq-sea-theme .faq-item.open {
+    border-color: #088395;
+}
+.faq-sea-theme .faq-trigger .faq-icon {
+    color: #088395;
+}
+
+/* Unificación de fondos para subsecciones dentro del bloque marítimo */
+.service-block-maritimo .pricing,
+.service-block-maritimo .process-section,
+.service-block-maritimo .faq-section,
+.service-block-maritimo .packing-tips-container {
+    background: transparent !important;
+}
+
+/* Caja de 100kg destacada como Más Solicitada */
+.maritime-box-card.featured-box-sea {
+    border: 2px solid #088395;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FA 100%);
+    box-shadow: 0 10px 30px -5px rgba(8, 131, 149, 0.25);
+    position: relative;
+}
+
+/* Key Takeaways / TL;DR Box */
+.key-takeaways {
+    background: linear-gradient(135deg, rgba(255, 90, 31, 0.05) 0%, rgba(255, 138, 0, 0.08) 100%);
+    border: 1.5px solid rgba(255, 90, 31, 0.2);
+    border-left: 4px solid var(--brand-orange);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0 2.5rem 0;
+    box-shadow: 0 4px 15px -2px rgba(255, 90, 31, 0.06);
+}
+.key-takeaways-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.key-takeaways-title svg {
+    color: var(--brand-orange);
+    flex-shrink: 0;
+}
+.key-takeaways-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.key-takeaways-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-primary);
+}
+.key-takeaways-item svg {
+    color: var(--brand-orange);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
