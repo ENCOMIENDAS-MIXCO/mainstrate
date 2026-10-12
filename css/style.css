@@ -207,9 +207,10 @@ header {
 .nav-links {
     display: none;
     align-items: center;
-    gap: 2rem;
+    gap: 1.15rem;
 }
 @media (min-width: 1024px) { .nav-links { display: flex; } }
+@media (min-width: 1280px) { .nav-links { gap: 1.65rem; } }
 
 .nav-link {
     font-family: var(--font-heading);
@@ -234,6 +235,56 @@ header {
 .nav-link:hover::after, .nav-link.active::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.nav-link-pulperia {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.08rem;
+    line-height: 1.05;
+    text-align: left;
+}
+.nav-link-kicker {
+    font-family: var(--font-heading);
+    font-size: 0.48rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--brand-orange);
+    line-height: 1;
+    white-space: nowrap;
+}
+.nav-link-name { line-height: 1.1; }
+@media (min-width: 1024px) {
+    .nav-links .nav-link-pulperia {
+        align-items: center;
+        text-align: center;
+    }
+}
+.mobile-nav .nav-link-pulperia {
+    align-self: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+    margin: 0.35rem 0 0.15rem;
+}
+.mobile-nav .nav-link-kicker { font-size: 0.62rem; letter-spacing: 0.02em; }
+
+.footer-link-pulperia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+}
+.footer-link-kicker {
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--brand-orange);
+    line-height: 1.2;
 }
 
 .menu-toggle {
@@ -747,6 +798,224 @@ header {
     color: rgba(255,255,255,0.9);
     line-height: 1.6;
     text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* --- 15b. PULPERÍA Y ENVÍO URGENTE (portada) --- */
+.pulperia-block { background: var(--bg); }
+.pulperia-banner {
+    min-height: 360px;
+    background: url('../images/tegucigalpa-Turismo-Honduras-ok.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.pulperia-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10,15,30,0.82) 0%, rgba(255,90,31,0.28) 100%);
+}
+.pulperia-banner-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    padding: 3rem 1.5rem 2.5rem;
+}
+.pulperia-banner-title {
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.pulperia-banner-desc {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+    margin: 0 auto 1.75rem;
+    max-width: 36rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.pulperia-body { padding: 2rem 0 3.5rem; }
+.pulperia-card-link {
+    display: inline-block;
+    margin-top: 1.25rem;
+    color: var(--brand-orange);
+    font-weight: 700;
+}
+.pulperia-card-link:hover { color: var(--brand-orange-hover); }
+.urgent-shipping { padding: 4rem 0; background: var(--bg-hover); }
+.urgent-shipping-head .section-header { margin-bottom: 1.5rem; }
+.urgent-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #ffcc00;
+}
+.urgent-shipping-body { padding-top: 2.5rem; }
+.urgent-intro {
+    display: grid;
+    gap: 1.75rem;
+    align-items: start;
+}
+.urgent-intro .urgent-notes { grid-template-columns: 1fr; margin-top: 1.25rem; }
+.urgent-intro .urgent-actions { margin-top: 1.25rem; }
+.urgent-shot img { max-height: 520px; object-fit: contain; object-position: top center; background: #fff; }
+.urgent-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 2.5rem 2.25rem;
+}
+.urgent-panel .section-title {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    margin-bottom: 0.75rem;
+}
+.urgent-panel p { color: var(--text-muted); line-height: 1.65; }
+.urgent-partner {
+    margin-top: 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.urgent-notes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+}
+.urgent-note {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1.35rem 1.25rem;
+    background: var(--bg-hover);
+}
+.urgent-note h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.45rem;
+    color: var(--text-primary);
+}
+.urgent-note p { margin: 0; }
+.urgent-climate { margin-top: 1.35rem; }
+.urgent-packs { margin-top: 1.75rem; min-width: 0; }
+.urgent-packs h3 {
+    font-size: 1.15rem;
+    margin: 0 0 0.85rem;
+    color: var(--text-primary);
+}
+.urgent-pack-grid + h3 { margin-top: 1.5rem; }
+.urgent-pack-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    min-width: 0;
+}
+.pack-card {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-hover);
+    padding: 1rem 0.85rem 1.1rem;
+    text-align: center;
+}
+.pack-card p { margin: 0; }
+.pack-name {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+.pack-meta {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+.pack-art {
+    display: block;
+    width: 4.25rem;
+    height: 3.2rem;
+    margin: 0.85rem auto 0;
+}
+.urgent-volume { margin-top: 1.25rem; }
+.urgent-frame-wrap { min-width: 0; }
+.urgent-shot {
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #fff;
+}
+.urgent-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.urgent-frame-link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--brand-orange);
+}
+.urgent-frame-link:hover { color: var(--brand-orange-hover); }
+.urgent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+.arrive-section { padding: 4.5rem 0 1rem; }
+.arrive-card {
+    max-width: 920px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+}
+.arrive-name {
+    margin: 0 0 0.35rem;
+    color: var(--text-primary);
+    font-weight: 700;
+    line-height: 1.4;
+}
+.arrive-address { margin: 0; color: var(--text-primary); }
+.arrive-hours {
+    margin: 0.35rem 0 1rem;
+    color: var(--text-muted);
+}
+.arrive-map iframe {
+    display: block;
+    width: 100%;
+    height: 420px;
+    border: 0;
+    border-radius: var(--radius-sm);
+}
+.arrive-actions { margin-top: 1rem; }
+.pulperia-grid { grid-template-columns: 1fr; }
+@media (max-width: 767px) {
+    .pulperia-banner { min-height: 260px; }
+    .pulperia-banner-inner { padding: 2.25rem 1.25rem 2rem; }
+    .urgent-panel { padding: 1.75rem 1.25rem; }
+    .arrive-map iframe { height: 280px; }
+    .arrive-card { padding: 1.25rem; }
+    .urgent-actions .btn,
+    .arrive-actions .btn { width: 100%; }
+}
+@media (min-width: 768px) {
+    .urgent-pack-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+    .pulperia-grid { grid-template-columns: repeat(3, 1fr); }
+    .urgent-intro { grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr); align-items: stretch; }
+    .urgent-intro .urgent-notes { grid-template-columns: 1fr; }
+    .urgent-frame-wrap { display: flex; flex-direction: column; }
+    .urgent-shot { flex: 1; display: flex; align-items: flex-start; justify-content: center; }
+    .urgent-shot img { width: 100%; height: 100%; max-height: none; object-fit: contain; object-position: top center; }
+    .urgent-pack-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* --- 16. CONTACT FORM --- */
