@@ -1170,9 +1170,22 @@ footer {
 }
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: 1.25fr 1.25fr 1fr 0.9fr 1.15fr;
+    gap: 1.5rem;
     margin-bottom: 3rem;
+    align-items: start;
+}
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+@media (max-width: 640px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 .footer-logo { height: 6rem; width: auto; max-width: 100%; object-fit: contain; margin-bottom: 1.25rem; }
 .footer-desc { font-size: 0.9rem; line-height: 1.7; color: #718096; margin-bottom: 1.5rem; }
@@ -1273,13 +1286,57 @@ footer {
 /* --- 19. ANIMATIONS / SCROLL REVEAL --- */
 .animate-reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    transform: translateY(10px);
+    transition: opacity 0.42s var(--ease-out), transform 0.42s var(--ease-out);
+}
+@media (min-width: 768px) {
+    .animate-reveal {
+        transform: translateY(16px);
+        transition-duration: 0.6s;
+    }
+}
+@media (min-width: 1024px) {
+    .animate-reveal {
+        transform: translateY(22px);
+        transition-duration: 0.78s;
+    }
 }
 .animate-reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
+@media (prefers-reduced-motion: reduce) {
+    .animate-reveal,
+    .premium-float,
+    .premium-float-delayed {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+html.js-motion .animate-reveal { transition: none; }
+html.js-motion .hero-content.animate-reveal,
+html.js-motion .hero-image-wrapper.animate-reveal {
+    opacity: 1;
+    transform: none;
+}
+html.js-motion .motion-pending {
+    opacity: 0;
+    transform: translateY(10px);
+}
+@media (min-width: 768px) {
+    html.js-motion .motion-pending { transform: translateY(16px); }
+}
+@media (min-width: 1024px) {
+    html.js-motion .motion-pending { transform: translateY(22px); }
+}
+html.js-motion .motion-fade.motion-pending,
+html.js-motion .hero-image-wrapper.motion-pending {
+    opacity: 0;
+    transform: none;
+}
+html.js-motion .motion-done { opacity: 1; }
 
 /* --- 20. SERVICE PAGE HERO --- */
 .page-hero {
@@ -2782,18 +2839,18 @@ svg.dropdown-icon { width: 10px !important; height: 10px !important; }
 
 /* --- Hero Comparativa Rápida (Aéreo vs Marítimo - Diseño Premium & Amplio) --- */
 .page-hero-content.page-hero-wide {
-    max-width: 1100px;
+    max-width: 1240px;
 }
 .quick-comparison-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin: 3rem auto 0;
-    max-width: 1100px;
+    max-width: 1240px;
     width: 100%;
     text-align: left;
 }
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .quick-comparison-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
