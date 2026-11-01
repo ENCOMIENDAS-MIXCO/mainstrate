@@ -506,7 +506,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 10. INTERSECTION OBSERVER FOR SCROLL REVEALS ---
     const animatedElements = document.querySelectorAll('.bento-card, .stat-box, .faq-item, .contact-card, .animate-reveal');
     
-    if ('IntersectionObserver' in window) {
+    if (!document.documentElement.classList.contains('js-motion') && 'IntersectionObserver' in window) {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
